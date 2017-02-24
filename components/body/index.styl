@@ -1,0 +1,226 @@
+.body-content-container
+  padding-top 20px
+  garamond-size('l-body')
+
+.main-side-margin
+  margin 0 20px
+
+.chevron
+  chevron-item()
+
+.body-section-title
+  border-top 1px solid gray-color
+  padding 20px 0
+  avant-garde('l-headline')
+
+.margin-bottom
+  margin-bottom 40px
+
+.body-section-content
+  border-top 1px solid gray-color
+  line-height 2
+  font-size 16px
+  margin-bottom 60px
+  .body-img
+    width 100%
+    margin-bottom 40px
+    margin-top 40px
+    height 65vw
+    background-size contain
+    background-position top center
+    background-repeat no-repeat
+
+.js-section-content
+  overflow-y hidden
+  max-height 1000px
+  transition max-height .5s ease-in-out
+
+.js-section-content.closed
+  max-height 0px
+  margin-bottom 0px
+  border-top-style none
+  transition border-top-style .3s ease-in-out
+
+.vertical-rectangle
+  width 100%
+  height 205px
+
+.small-rectangle
+  width 100%
+  height 135px
+
+.body-section-content__section-two
+  @extends .body-section-content
+  h2
+    font-weight bold
+    margin-top 5px
+    font-size 16px
+  .italicize
+    font-style italic
+  p
+    font-size 16px
+
+.columns
+  -webkit-columns 2
+  -moz-columns: 2
+  columns: 2
+  margin-top 40px
+  line-height 1.5
+
+.column
+  margin 0 5px
+
+.artist-text > p
+  font-size 13px
+
+.artist-text
+  margin-bottom 40px
+  p
+   font-size 13px
+   color gray
+  h2
+    font-weight bold
+    color gray
+    font-size 13px
+
+.avant-garde-button-black:visited
+  color #fff
+
+.body-section-sub-header
+  font-weight bold
+  margin-bottom 20px
+  padding-top 20px
+
+.body-section:last-of-type h1.body-section-title
+  border-bottom 1px solid gray-color
+
+.body-section:last-of-type .body-section-content
+  border-top-style none
+
+.format-spacing
+  padding-bottom 20px
+
+.body-section-title.is-desktop
+  display none
+
+.body-section > a.is-active::after
+  top 25%
+  transform rotate(90deg)
+
+@media (min-width 481px)
+
+  .body-section
+    max-height none
+
+  .main-side-margin
+    margin 0 170px
+
+  .body-content-container
+    padding-top 0px
+
+  .body-section
+    margin-top 50px
+
+  .body-section:first-of-type
+    margin-top 0px
+    padding-top 100px
+
+  .body-section-content
+    display flex
+    flex-direction column
+    font-size 22px
+    border-top-style none
+    padding-top 0px
+    margin-bottom 0px
+    .body-img
+      margin-top 0px
+      height 65vw
+      max-height 400px
+
+  .js-section-content.closed
+    max-height 2000px
+
+  .artist-text
+    margin-bottom 40px
+    max-width 210px
+    p
+     font-size: 15px;
+     color gray
+    h2
+      font-weight bold
+      color gray
+      font-size 15px
+
+  .body-section-content__section-two
+    display flex
+    flex-direction column
+
+  .body-section-title.is-desktop
+    display block
+    padding-top 0px
+    padding-bottom 30px
+    text-align center
+    font-size 24px
+    font-weight bolder
+    avant-garde-size('xl-headline')
+    &:after
+      content ''
+      display block
+      width 50px
+      margin 20px auto 0 auto
+      border-bottom 2px solid black
+
+  .is-mobile
+    display none
+
+  .body-section-title, .body-section-content__section-two
+    border-top-style none
+
+  .columns
+    margin-bottom 0px
+    padding-top 0px
+    margin-left 8%
+
+  .small-rectangle
+    height 210px
+    max-width 200px
+
+  .vertical-rectangle
+    height 280px
+    max-width 200px
+
+  .staggered
+    padding-top 150px
+
+  .section-two-text
+    margin-bottom 0px
+
+  .section-two-text-container > p
+    font-size 22px
+
+  #ios .avant-garde-button-black.launch-app-store
+    margin-bottom 0px
+
+  .avant-garde-button-black
+    width 250px
+    margin 40px 0 90px 0
+    &:visited
+      color #fff
+
+  .body-section-sub-header
+    padding-bottom 10px
+    font-weight bolder
+
+  .top-margin
+    margin-top 40px
+
+  .body-section:last-of-type h1.body-section-title
+    border-bottom-style none
+
+  .body-section:last-of-type .body-section-content
+    border-top-style none
+
+  .chevron-nav-list a::after
+    display none
+
+@import 'desktop'

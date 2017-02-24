@@ -1,0 +1,55 @@
+.navigation
+  display flex
+  width 100%
+  padding 10px
+  avant-garde-size('m-headline')
+  justify-content space-between
+  align-items center
+  border-bottom 1px solid rgba(white, 0.5)
+  z-index 505
+  position absolute
+
+.artsy-logo
+  display inline-block
+  height 30px
+  > svg
+    fill white
+    height 100%
+    vertical-align bottom
+  //
+.nav-item
+  display inline-block
+  text-decoration none
+  padding 2px
+  margin 0 .5em
+  &
+  &:visited
+    color white
+  &.is-active
+    border-bottom 2px solid white
+
+.is-mobile-artsy-link
+  display none
+
+@media (min-width 481px)
+  .is-mobile-artsy-link
+    display inline-block
+
+@media (orientation: landscape)
+  @media (max-width 480px)
+    .navigation
+      padding 5px
+      font-size 13px
+
+    .artsy-logo
+      height 20px
+
+@media (min-width 1200px)
+  .nav-item:first-child
+    display inline-block
+
+  .nav-item
+    margin 0 1em
+
+  .is-mobile-artsy-link
+    display inline-block

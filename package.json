@@ -1,0 +1,62 @@
+{
+  "name": "biesenbach-web",
+  "version": "1.0.0",
+  "description": "Arsty Actions (Google Assistant) splash page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "css": "stylus -u nib --watch components/layout/index.styl --out public/",
+    "css-p": "stylus -u nib components/layout/index.styl --out public/ && sqwish public/index.css -o public/index.css",
+    "html": "jade --watch components/layout/index.jade --out public/",
+    "html-p": "jade components/layout/index.jade --out public/",
+    "js": "watchify --transform coffeeify --transform jadeify components/layout/index.coffee -o public/index.js",
+    "js-p": "browserify --transform coffeeify --transform jadeify components/layout/index.coffee | uglifyjs > public/index.js",
+    "images": "mkdir -p public/images && for f in images/*.jpg; do convert -strip -interlace Plane -quality 70% -resize 1000x1000 \"$f\" public/\"$f\"; done",
+    "watch": "npm run css & npm run js & npm run html",
+    "browsersync": "browser-sync start --files \"**/*.coffee,**/*.jade,**/*.styl\" --server public --reload-delay 1000",
+    "icons": "cp -a node_modules/artsy-iconfont/output/fonts public",
+    "start": "npm run images && npm run icons & npm run watch & npm run browsersync",
+    "build": "npm run css-p & npm run html-p & npm run js-p & npm run icons",
+    "upload": "bucket-assets --bucket actions.artsy.net --fingerprint false",
+    "deploy": "npm run build && nf run npm run upload"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artsy/biesenbach-web.git"
+  },
+  "keywords": [
+    "actions",
+    "google",
+    "home",
+    "splash",
+    "page",
+    "artsy"
+  ],
+  "author": "Daniel Doubrovkine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artsy/biesenbach/issues"
+  },
+  "homepage": "https://github.com/artsy/biesenbach#readme",
+  "dependencies": {
+    "artsy-elan": "0.0.6",
+    "artsy-iconfont": "git://github.com/artsy/artsy-iconfont.git",
+    "browser-sync": "^2.8.2",
+    "browserify": "^11.0.1",
+    "bucket-assets": "^1.0.2",
+    "coffee-script": "^1.9.3",
+    "coffeeify": "^1.1.0",
+    "fastclick": "^1.0.6",
+    "foreman": "^1.4.1",
+    "jade": "^1.11.0",
+    "jadeify": "^4.4.0",
+    "jquery": "^2.1.4",
+    "nib": "^1.1.0",
+    "sqwish": "^0.2.2",
+    "stylus": "^0.52.0",
+    "tocca": "^0.1.7",
+    "uglify-js": "^2.4.24",
+    "watchify": "^3.3.1",
+    "waypoints": "^4.0.0"
+  }
+}

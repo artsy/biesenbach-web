@@ -1,0 +1,237 @@
+header
+  height 50vh
+  position relative
+
+.slide-show-container
+  position relative
+  height 100%
+
+.header-slide
+  width 100%
+  height 100%
+  background-position center center
+  background-size cover
+  -webkit-transition: opacity 1s ease-in
+  -moz-transition opacity 1s ease-in
+  -o-transition opacity 1s ease-in
+  -ms-transition opacity 1s ease-in
+  transition opacity 1s ease-in
+  position absolute
+  top 0
+  background-image url('./images/banner-1.jpg')
+  opacity 0
+
+.active-banner
+  opacity 1
+  z-index 500
+
+.slide-1
+  background-image url('./images/banner-1.jpg')
+
+.slide-2
+  background-image url('./images/banner-2.jpg')
+
+.header-content
+  height 100%
+  display table
+  z-index 501
+  position absolute
+  top 0
+
+.header-content-inner
+  display table-cell
+  height 100%
+  width 100%
+  vertical-align middle
+
+.header-text
+  width 80%
+  margin 16% auto 0 auto
+  color white
+  avant-garde-size('s-headline')
+  text-align justify
+  font-size 28px
+  > p
+    margin 20px 0
+    &:first-child
+      margin-top 0
+    &:last-child
+      margin-bottom 0
+
+.header-section-nav
+  display none
+
+.header-chevron-link
+  display none
+
+// mobile
+@media (max-width 320px)
+  .header-text > p
+    font-size 13px
+
+@media (orientation: landscape)
+  header
+    @media (max-width 480px)
+      min-height 180px
+    @media (max-width 320px)
+      min-height 150px
+
+  .header-content
+    @media (max-width 480px)
+      height 65%
+
+  .header-text
+    padding 0 20px
+  .header-text > p
+    @media (max-width 480px)
+      font-size 12px
+      font-weight bolder
+    @media (max-width 320px)
+      font-size 10px
+      font-weight bold
+
+// tablet
+@media (min-width 481px)
+  header
+    height 75vh
+
+  .slide-1, .slide-2
+    &:before
+      content "© Art.sy Inc., 2016-2017"
+
+  .header-slide
+    position fixed
+    z-index -1
+    &:before
+      position absolute
+      bottom 10px
+      left 13%
+      color white
+      garamond-size('l-caption')
+      font-size 12px
+
+  .header-content
+    height 100%
+    width 100%
+
+  .header-text
+    text-align center
+    max-width 1200px
+    margin 6% auto
+    avant-garde-size('xl-headline')
+    font-size 30px
+    > p
+      margin 40px 0
+
+  .header-section-nav
+    display block
+    height 25%
+    text-align center
+    padding-top 30px
+    > a
+      display inline-block
+      padding 8px 18px
+      border-left 1px solid rgba(white, 0.5)
+      border-right @border-left
+      text-decoration none
+      cursor pointer
+      avant-garde-size('l-headline')
+      font-size 14px
+      color white
+      transition opacity 0.25s
+      &:hover
+        opacity 0.5
+      &:first-child
+        border-left none
+      &:last-child
+        border-right none
+
+  .stuck
+    transform translate3d(0, 0, 0)
+    position fixed
+    top 0
+    left 0
+    width 100%
+    padding-top 0px
+    border-bottom 1px solid #e5e5e5
+    background-color #fff
+    z-index 600
+    opacity 1
+    height 94px !important
+
+  .header-section-nav.stuck a
+    color #999
+    &:hover
+      color #6A0BC1
+      opacity 1
+
+  .header-chevron-link-wrapper
+    display block
+    text-align center
+
+  .header-chevron-link
+    display inline-block
+    chevron()
+    text-decoration none
+    &:visited
+      text-decoration none
+    &::after
+      text-align center
+      display block
+      position relative
+      transform rotate(90deg)
+
+// desktop
+@media (min-width 1200px)
+  header
+    height 100vh
+
+  .header-text
+    avant-garde-size('xl-headline')
+    font-size 50px
+    > p
+      margin 40px 0
+
+  .header-section-nav
+    display block
+    height 25%
+    text-align center
+    > a
+      display inline-block
+      padding 15px 40px
+      border-left 1px solid rgba(white, 0.5)
+      border-right @border-left
+      text-decoration none
+      avant-garde-size('l-headline')
+      font-size 14px
+      color white
+      transition opacity 0.25s
+      &:hover
+        opacity 0.5
+
+  .header-section-nav.stuck
+    padding-top 0px
+
+@media (max-height 761px)
+  .header-chevron-link-wrapper
+    display none
+
+  .header-section-nav
+    padding-top 15px
+
+@media (min-width 1600px)
+  .header-slide:before
+    width 1200px
+    left "calc(50% - %s)" % 600px
+
+  .header-chevron-link-wrapper
+    margin-top 68px
+
+  .header-section-nav
+    margin-top 60px
+
+  .header-section-nav.stuck
+    margin-top 0px
+
+  .header-chevron-link::after
+    font-size 32px
