@@ -17,7 +17,7 @@
     "icons": "cp -a node_modules/artsy-iconfont/output/fonts public",
     "start": "npm run images && npm run icons & npm run watch & npm run browsersync",
     "build": "npm run css-p & npm run html-p & npm run js-p & npm run icons",
-    "upload": "bucket-assets --bucket actions.artsy.net --fingerprint false",
+    "upload": "bucket-assets --bucket assistant.artsy.net --fingerprint false",
     "deploy": "npm run build && nf run npm run upload"
   },
   "repository": {

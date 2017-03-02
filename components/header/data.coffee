@@ -2,7 +2,7 @@ module.exports =
   header:
     headline: 'Artsy + Amazon Echo'
     navLinks: {
-      'enable': 'Enable'
+      'use': 'Use'
       'artists': 'Artists'
       'open-source': 'Open-Source'
     }

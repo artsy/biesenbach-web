@@ -6,11 +6,11 @@ include ../nav/index
 .header-content
   .header-content-inner
     .header-text
-      .p Artsy with Google Assistant (Home)
+      .p Artsy with Google Assistant
 
       nav.header-section-nav
         for link in Object.keys(copy.header.navLinks)
           a( data-section='#{link}' )
             = copy.header.navLinks[link]
       .header-chevron-link-wrapper
-        a.header-chevron-link.icon-chevron-down(href="#enable") &nbsp;
+        a.header-chevron-link.icon-chevron-down(href="#use") &nbsp;

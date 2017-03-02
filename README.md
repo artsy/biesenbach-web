@@ -5,7 +5,7 @@
 ### Meta
 
 * __State:__ production
-* __Production:__ [http://actions.artsy.net](http://actions.artsy.net) | [S3](https://aws.amazon.com/s3/biesenbach-web)
+* __Production:__ [http://assistant.artsy.net](http://assistant.artsy.net) | [S3](https://aws.amazon.com/s3/biesenbach-web)
 * __Github:__ [https://github.com/artsy/biesenbach-web](https://github.com/artsy/biesenbach-web)
 * __Point People:__ [@dblock](https://github.com/dblock)
 
