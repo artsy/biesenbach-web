@@ -11,6 +11,6 @@
 
 ### License
 
-Copyright (c) Art.sy Inc., 2017
+Copyright (c) Art.sy Inc., 2017-2019
 
 MIT License, see [LICENSE](LICENSE) for details.
